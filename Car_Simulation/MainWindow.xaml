@@ -1,0 +1,40 @@
+﻿<Window x:Class="Car_Simulation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Simulation"
+        mc:Ignorable="d"
+        Title="Ignition Controls" Height="350" Width="550" Background="LightSteelBlue" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid>
+        <Label x:Name="lbl1" Content="Car Simulation" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" Background="LightCoral" BorderBrush="Red" BorderThickness="2"/>
+        <ListBox x:Name="lbIgnition" Margin="210,129,205,107" Background="LightGreen" BorderBrush="green" BorderThickness="2" >
+            <RadioButton x:Name="rdnEngineOff" Content="Off" Checked="rdnEngineOff_Checked"/>
+            <RadioButton x:Name="rdnEngineIgnition" Content="Ignition" Checked="rdnEngineIgnition_Checked"/>
+            <RadioButton x:Name="rdnEngineOn" Content="On" Checked="rdnEngineOn_Checked"/>
+        </ListBox>
+        <ListBox x:Name="lbKeyInOut" Margin="39,129,376,107" Background="LightGreen" BorderBrush="green" BorderThickness="2">
+            <RadioButton x:Name="rdnKeyOut" Content="Key Out" Checked="rdnKeyOut_Checked"/>
+            <RadioButton x:Name="rdnKeyIn" Content="Key In" Checked="rdnKeyIn_Checked"/>
+
+        </ListBox>
+        <ListBox x:Name="lbDomeLight" Margin="373,129,42,107" Background="LightGreen" BorderBrush="green" BorderThickness="2">
+            <RadioButton x:Name="rdnDomeOff" Content="Off" Checked="rdnDomeOff_Checked"/>
+            <RadioButton x:Name="rdnDomeAuto" Content="Auto" Checked="rdnDomeAuto_Checked"/>
+            <RadioButton x:Name="rdnDomeOn" Content="On" Checked="rdnDomeOn_Checked"/>
+        </ListBox>
+        <Label x:Name="lbl2" Content="Key In / Out" HorizontalAlignment="Left" Margin="64,101,0,0" VerticalAlignment="Top" Width="85" FontSize="14" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl3" Content="Ignition" HorizontalAlignment="Left" Margin="235,101,0,0" VerticalAlignment="Top" Width="85" FontSize="14" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbl4" Content="Dome Lights" HorizontalAlignment="Left" Margin="395,101,0,0" VerticalAlignment="Top" Width="91" HorizontalContentAlignment="Center" FontSize="14"/>
+        <Button x:Name="btnCarControls" Content="Car Controls" HorizontalAlignment="Left" Margin="144,247,0,0" VerticalAlignment="Top" Height="30" Width="98" Background="LightSalmon" BorderBrush="red" BorderThickness="2" Click="btnCarControls_Click">
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Click this button to enter control the actions in the car</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+        </Button>
+        
+        <Button x:Name="btnTurnOff" Content="Turn Off" HorizontalAlignment="Left" Margin="311,247,0,0" VerticalAlignment="Top" 
+                Height="30" Width="98" Background="LightSalmon" BorderBrush="red" BorderThickness="2" Click="btnTurnOff_Click" />
+    </Grid>
+</Window>
